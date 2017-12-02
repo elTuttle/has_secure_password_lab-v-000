@@ -4,7 +4,9 @@ class SessionsController < ApplicationController
     binding.pry
     if params[:user][:password] != ""
       if user = User.find_by(name: params[:user][:name])
-        sessions[:name] = user.name
+        if user.authenticate(params[:user][:password])
+          session[:name] = user.name
+        end
       end
     end
   end
