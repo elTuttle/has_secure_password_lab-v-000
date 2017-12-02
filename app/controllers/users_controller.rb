@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     if user.valid?
       user.save
       session[:user_id] = user.id
-      redirect_to '/login'
+      redirect_to '/welcom'
     else
       redirect_to '/users/new'
     end
