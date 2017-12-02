@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def create
     binding.pry
     user = User.new()
+    user.name = params[:user][:name]
     if user.valid?
       user.save
       redirect_to '/welcome'
