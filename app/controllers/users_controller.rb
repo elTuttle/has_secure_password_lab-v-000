@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  def new    
+  def new
   end
 
   def create
@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       user.save
       redirect_to '/welcome'
     else
-      
+      redirect_to '/login'
     end
   end
 
