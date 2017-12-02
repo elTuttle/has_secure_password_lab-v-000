@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       user.save
       redirect_to '/sessions/create'
     else
-      redirect_to '/login'
+      redirect_to '/users/new'
     end
   end
 
