@@ -7,10 +7,16 @@ class SessionsController < ApplicationController
         if user.authenticate(params[:user][:password])
           session[:name] = user.name
           redirect_to '/welcome'
+        else
+          redirect_to '/login'
         end
+      else
+        redirect_to '/login'
       end
+    else
+      redirect_to '/login'
     end
-    redirect_to '/login'
+    
   end
 
 end
