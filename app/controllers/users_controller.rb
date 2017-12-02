@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     user.password_confirmation = params[:user][:password_confirmation]
     if user.valid?
       user.save
-      redirect_to '/welcome'
+      redirect_to '/sessions/create'
     else
       redirect_to '/login'
     end
