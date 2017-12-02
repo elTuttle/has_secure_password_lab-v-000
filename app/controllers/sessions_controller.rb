@@ -4,6 +4,7 @@ class SessionsController < ApplicationController
     if params[:password] != ""
       if user = User.authenticate(params[:password])
       end
+    end
   end
 
 end
