@@ -7,6 +7,8 @@ class UsersController < ApplicationController
     binding.pry
     user = User.new()
     user.name = params[:user][:name]
+    user.name = params[:user][:password]
+    user.name = params[:user][:password_confirmation]
     if user.valid?
       user.save
       redirect_to '/welcome'
