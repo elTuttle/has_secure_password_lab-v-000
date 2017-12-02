@@ -6,8 +6,8 @@ class UsersController < ApplicationController
       user.save
       redirect_to '/welcome'
     else
-        
+
     end
   end
-  
+
 end
