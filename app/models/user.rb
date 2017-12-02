@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
       self
     else
       false
-    end  
+    end
   end
 
 
