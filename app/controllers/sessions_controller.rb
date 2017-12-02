@@ -10,6 +10,7 @@ class SessionsController < ApplicationController
         end
       end
     end
+    redirect_to '/login'
   end
 
 end
