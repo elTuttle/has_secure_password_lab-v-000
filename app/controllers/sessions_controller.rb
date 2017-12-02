@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
       if user = User.find_by(name: params[:user][:name])
         if user.authenticate(params[:user][:password])
           session[:name] = user.name
+          redirect_to '/welcome'
         end
       end
     end
