@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    binding.pry
+    #binding.pry
     user = User.new()
     user.name = params[:user][:name]
     user.password = params[:user][:password]
